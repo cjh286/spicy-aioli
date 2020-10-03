@@ -4,8 +4,8 @@
   "description": "ML experients",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --watch"
+    "build": "webpack-cli ./src/app.js --config webpack-config.js",
+    "start": "webpack ./src/app.js --output ./dist/app-bundle.js --mode development"
   },
   "keywords": [],
   "author": "cjh286, sp772",
@@ -15,12 +15,18 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "css-loader": "^0.26.1",
+    "express": "4.17.1",
+    "nodemon": "2.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
-    "express": "4.17.1",
-    "nodemon": "2.0.2"
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.0.4"
   }
 }
